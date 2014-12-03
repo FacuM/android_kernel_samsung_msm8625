@@ -1,4 +1,4 @@
-CFLAGS_scm.o :=$(call as-instr,.arch_extension sec,-DREQUIRES_SEC=1)
+CCFLAGS_scm.o :=$(call as-instr,.arch_extension sec,-DREQUIRES_SEC=1)
 
 obj-y += io.o dma.o memory.o
 ifndef CONFIG_ARM_ARCH_TIMER
@@ -422,3 +422,4 @@ obj-$(CONFIG_MSM_FIQ) += msm7k_fiq.o
 obj-$(CONFIG_MSM_FIQ) += msm7k_fiq_handler.o
 
 obj-$(CONFIG_SEC_LOG_LAST_KMSG) += sec_log.o
+obj-$(CONFIG_FORCE_FAST_CHARGE) += fastchg.o
