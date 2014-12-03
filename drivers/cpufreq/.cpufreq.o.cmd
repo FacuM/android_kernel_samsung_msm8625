@@ -5,7 +5,9 @@ source_drivers/cpufreq/cpufreq.o := drivers/cpufreq/cpufreq.c
 deps_drivers/cpufreq/cpufreq.o := \
     $(wildcard include/config/hotplug/cpu.h) \
     $(wildcard include/config/smp.h) \
+    $(wildcard include/config/cpu/voltage/table.h) \
     $(wildcard include/config/cpu/freq/gov/performance.h) \
+    $(wildcard include/config/cpufreq/limit/max/freq.h) \
   include/linux/kernel.h \
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/preempt/voluntary.h) \
