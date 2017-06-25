@@ -8,26 +8,8 @@ ui_print("                 v1.00                 ");
 ui_print("                                       ");
 ui_print("=> It's possible thanks to: ");
 ui_print("- Squid2");
-ui_print("- Subhrajyoti Sen");
-ui_print("- Dark98");
-ui_print("- TeamMex");
-ui_print("- CarlosArriagaCM");
-ui_print("- zeeshanhussain");
-ui_print("- FireLord1");
-ui_print("- pelya");
-ui_print("- lecron89");
-ui_print("- FlourMo");
-ui_print("- Harshit Jain");
-ui_print("- Javier Sayago");
-ui_print("- DespairFactor");
-ui_print("- moresushant48");
-ui_print("- Park Ju Hyung");
-ui_print("- Prema Chand Alugu");
-ui_print("- Joe Maples");
-ui_print("- tywinlannister7");
+ui_print("- romandevel");
 ui_print("- facuarmo");
-ui_print(" ");
-ui_print("Thanks to: Dark98, jasonmerc and ruh01 for bug reporting and helping the community.");
 ui_print(" ");
 
 ui_print("Extracting flashing tools...");
@@ -47,19 +29,6 @@ delete("/tmp/mkbootimg");
 delete("/tmp/unpackbootimg");
 delete("/tmp/flash_kernel.sh");
 set_progress(0.7);
-
-ui_print("Installing kernel modules...");
-mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/system");
-package_extract_dir("system", "/system");
-set_perm_recursive(0, 0, 0755, 0644, "/system/lib/modules");
-symlink("/system/lib/modules/pronto/pronto_wlan.ko", "/system/lib/modules/wlan.ko");
-unmount("/system");
-set_progress(0.9);
-
-mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/cache", "/cache");
-ui_print("Wiping cache...");
-delete_recursive("/cache");
-unmount("/cache");
 
 ui_print("Kernel installation completed!");
 set_progress(1.0);
