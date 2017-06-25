@@ -11,7 +11,6 @@ else
  rm -f arch/arm/boot/dt.img
  rm -f "$ZIPPATH/boot.img"
  make CROSS_COMPILE='/opt/toolchains/arm-eabi-4.4.3/bin/arm-eabi-' ARCH=arm -j10 zImage
- make CROSS_COMPILE='/opt/toolchains/arm-eabi-4.4.3/bin/arm-eabi-' ARCH=arm -j10 dtimage
  make CROSS_COMPILE='/opt/toolchains/arm-eabi-4.4.3/bin/arm-eabi-' ARCH=arm -j10 modules
  rm -rf squid_install
  mkdir -p squid_install
