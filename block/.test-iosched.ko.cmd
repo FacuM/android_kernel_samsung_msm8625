@@ -1,0 +1,1 @@
+cmd_block/test-iosched.ko := /opt/toolchains/arm-eabi-4.4.3/bin/arm-eabi-ld -EL -r  -T /home/facuarmo/android_kernel_samsung_msm8625/scripts/module-common.lds --build-id  -o block/test-iosched.ko block/test-iosched.o block/test-iosched.mod.o
